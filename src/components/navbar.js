@@ -1,6 +1,6 @@
 //create the navigation bar
 const Navbar = () => (
-    <nav className="bg-blue-800 text-white p-4 sticky top-0 shadow-md h-24 sm:text-2xl md:text-3xl">
+    <nav className="bg-try bg-opacity-60 text-white p-4 sticky top-0 shadow-md h-24 sm:text-lg md:text-2xl">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">WeatherNow</h1>
         <ul className="flex space-x-6">

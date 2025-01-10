@@ -3,6 +3,11 @@ import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="bg-accent bg-opacity-60 text-white py-16">
+      <div class="flex items-center pt-4 mb-16 sm:text-sm md:text-2xl font-bold container mx-auto text-center">
+            <hr class="flex-grow"/>
+              <span classname="">TriGIS</span>
+            <hr class="flex-grow"/>
+      </div>
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 animate-fadeIn hover:scale-105 transition-transform">Contact Us</h2>
         <p className="text-lg mb-8">

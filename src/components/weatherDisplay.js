@@ -29,7 +29,7 @@ const WeatherDisplay = ({ weather, error }) => {
     }
   
     return (
-      <section id="forecast" className="bg-accent bg-opacity-60 py-16">
+      <section id="forecast" className="bg-accent bg-opacity-60 pt-3 pb-8">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold">{weather.name}</h2>
         <p className="text-lg ">{weather.weather[0].description}</p>
@@ -39,7 +39,7 @@ const WeatherDisplay = ({ weather, error }) => {
         <p className="text-lg font-semibold mt-4">
         Local Time: <span className="text-blue-600">{localTime}</span>
         </p>
-        <div class="flex items-center py-5 text-2xl font-bold">
+        <div class="flex items-center pt-12 mb-0 sm:text-sm md:text-2xl font-bold container mx-auto text-center">
             <hr class="flex-grow"/>
               <span classname="">TriGIS</span>
             <hr class="flex-grow"/>

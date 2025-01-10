@@ -71,8 +71,8 @@ const App = () => {
     <div>
       <Navbar />
       <Hero onSearch={fetchWeather}  onCurrentLocation={handleCurrentLocation} />
-      <div className="relative  w-full mx-auto bg-accent bg-opacity-60 py-4">
-        <h2 className="text-3xl font-bold text-center hover:scale-105 transition-transform">Current Weather:</h2>
+      <div className="container  w-full mx-auto bg-accent bg-opacity-60 pt-2">
+        <h2 className="md:text-3xl sm:text-2xl font-bold text-center hover:scale-105 transition-transform">Current Weather:</h2>
       </div>
       <WeatherDisplay weather={weather} error={error} />
       <About/>

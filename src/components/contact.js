@@ -9,7 +9,7 @@ const Contact = () => {
             <hr class="flex-grow"/>
       </div>
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 animate-fadeIn hover:scale-105 transition-transform">Contact Us</h2>
+        <h2 className="md:text-4xl sm:text-3xl font-extrabold mb-6 bg-clip-text animate-fadeIn hover:scale-105 transition-transform">Contact Us</h2>
         <p className="text-lg mb-8">
           Have questions or feedback? Connect with me through any of the options below.
         </p>

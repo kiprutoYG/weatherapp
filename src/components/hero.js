@@ -9,7 +9,7 @@ const Hero = ({onSearch, onCurrentLocation}) => (
             <p className="font-bold text-lg text-secondary mt-4 animate-fadeIn sm:text-sm md:text-lg">Get real time weather updates, accurate and timely</p>
             <div className="flex justify-center">
                 <SearchForm onSearch={onSearch} />
-                <button onClick={onCurrentLocation } className="bg-try text-white text-center px-6 py-2 rounded-lg hover:bg-blue-800 align-middle mt-2 sm:text-sm md:text-lg">Use Current Location</button>
+                <button onClick={onCurrentLocation } className="bg-try text-white text-center px-6 py-2 rounded-lg hover:bg-blue-800 align-middle mt-2 sm:text-sm md:text-lg">Use My Location</button>
             </div>
         </div>
     </section>

@@ -33,9 +33,9 @@ const WeatherDisplay = ({ weather, error }) => {
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold">{weather.name}</h2>
         <p className="text-lg ">{weather.weather[0].description}</p>
-        <p className="text-3xl font-bold ">{weather.main.temp}°C</p>
-        <p className="">Humidity: {weather.main.humidity}%</p>
-        <p className="">Wind Speed: {weather.wind.speed} m/s</p>
+        <p className="text-2xl font-bold ">{weather.main.temp}°C</p>
+        <p className="text-lg">Humidity: {weather.main.humidity}%</p>
+        <p className="text-lg">Wind Speed: {weather.wind.speed} m/s</p>
         <p className="text-lg font-semibold mt-4">
         Local Time: <span className="text-blue-600">{localTime}</span>
         </p>

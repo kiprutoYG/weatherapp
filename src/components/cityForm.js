@@ -59,7 +59,7 @@ const SearchForm = ({ onSearch }) => {
             value={city}
             onChange={handleInputChange}
             placeholder="Enter city"
-            className="p-3 flex-grow rounded-lg outline-secondary"
+            className="flex flex-col sm:flex-row gap-4 items-center p-3 flex-grow rounded-lg outline-secondary"
           />
           <button
             type="submit"

@@ -29,13 +29,50 @@ const App = () => {
     }
   };
 
+  // Fetch weather data by coordinates
+  const fetchWeatherByCoords = async (lat, lon) => {
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
+      );
+      if (!response.ok) {
+        throw new Error("Location not found!");
+      }
+      const data = await response.json();
+      setWeather(data);
+      setError("");
+    } catch (err) {
+      setError(err.message);
+      setWeather(null);
+    }
+  };
+
+  // Handle "Current Location" button
+  const handleCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetchWeatherByCoords(latitude, longitude);
+        },
+        (err) => {
+          setError("Unable to retrieve location. Please enable location access.");
+        }
+      );
+    } else {
+      setError("Geolocation is not supported by your browser.");
+    }
+  };
+
+
+
 
   return (
     <div>
       <Navbar />
-      <Hero onSearch={fetchWeather} />
-      <div className="relative  w-full mx-auto bg-main bg-opacity-65">
-        <h2 className="text-3xl font-bold text-center">Current Weather:</h2>
+      <Hero onSearch={fetchWeather}  onCurrentLocation={handleCurrentLocation} />
+      <div className="relative  w-full mx-auto bg-accent bg-opacity-60 py-4">
+        <h2 className="text-3xl font-bold text-center hover:scale-105 transition-transform">Current Weather:</h2>
       </div>
       <WeatherDisplay weather={weather} error={error} />
       <About/>
